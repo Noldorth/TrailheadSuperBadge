@@ -78,5 +78,11 @@ private class WarehouseCalloutServiceTest {
         Test.stopTest();
 
 
+        List<Product2> result = [SELECT Id, Name FROM Product2 WHERE Name = 'UPS 2000 VA' OR Name = 'Fuse 8A'];
+
+        System.assertEquals(2, result.size());
+
+
+
     }
 }
