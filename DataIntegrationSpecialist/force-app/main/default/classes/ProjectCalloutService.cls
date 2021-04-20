@@ -2,6 +2,7 @@ public class ProjectCalloutService {
     //Complete the implementation for business and callout logic
     @InvocableMethod
 	public static void postOpportunityToPMS(List<Id> oppsId) {
+        System.debug(oppsId);
 
         Opportunity opp = [SELECT Id ,Name, Account.Name, CloseDate, Amount FROM Opportunity WHERE Id = : oppsId[0]];
 
